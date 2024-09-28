@@ -1,0 +1,36 @@
+<header>
+    <link rel="stylesheet" href="/static/styles.css">
+</header>
+
+<h1>Marksheet</h1>
+
+
+    <form method="POST">
+        {%if error %}
+        <div class="alert alert-danger" role="alert">
+            please enter the value
+        </div>
+            {% endif %}
+        {% csrf_token %}
+        <label>Subject1</>
+        <input type="text" name="subject1"/> <br>
+        <label>subject2</label>
+        <input type="text" name="subject2"/> <br>
+        <label>subject3</label>
+        <input type="text" name="subject3"/> <br>
+        <label>subject4</label>
+        <input type="text" name="subject4"/> <br>
+        <label>subject5</label>
+        <input type="text" name="subject5"/> <br>
+
+        <button type="submit">Marksheet</button> <br>
+
+        <label> Total</label>
+        <input type="text" value="{{total}}"/> <br>
+        <label>Percentage</label>
+        <input type="text" value="{{per}}"/> <br>
+
+        <label>Division</label>
+        <input type="text" value="{{div}}"/> <br>
+
+        
